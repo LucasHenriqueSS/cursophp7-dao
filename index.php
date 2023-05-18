@@ -11,18 +11,26 @@ echo $usuario1;*/
 //$usuarios =  Usuario::getList();
 //echo json_encode($usuarios);
 
-
 // CARREGA UMA LISTA DE USUARIOS BUSCANDO PELO LOGIN
 //$search = Usuario::search("lu");
 //echo json_encode($search);
 
+//CARREGA UM USUARIO AUTENTICANDO LOGIN E SENHA
+//$busca = new Usuario();
+//$busca->login("lula", "bolsonaro");
+//echo $busca;
 
-$busca = new Usuario();
+/*criando um novo usuario pelo metodo construtor e inserindo no banco pelo metodo insert da classe Usuario.
+$aluno = new Usuario("sadam", "rousseim");
+$aluno->insert();
+echo $aluno;*/
 
-$busca->login("lula", "bolsonaro");
+$usuario = new Usuario();
 
-echo $busca;
+$usuario->loadById(13);
+$usuario->update("KAZUHIRA", "miller");
 
+echo $usuario;
 
 
 
