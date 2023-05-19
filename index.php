@@ -25,13 +25,20 @@ $aluno = new Usuario("sadam", "rousseim");
 $aluno->insert();
 echo $aluno;*/
 
+/*
+ALTERAR UM USUARIO ESPECIFICO
 $usuario = new Usuario();
-
 $usuario->loadById(13);
 $usuario->update("KAZUHIRA", "miller");
+echo $usuario;*/
 
-echo $usuario;
+$user = new Usuario();
 
+$user->loadById(8);
+
+$user->del();
+
+echo $user;
 
 
 
